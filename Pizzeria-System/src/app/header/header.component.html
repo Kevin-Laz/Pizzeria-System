@@ -29,7 +29,7 @@
         </path>
       </svg>
 
-      <a *ngIf="!log"><span  class="text-black font-medium bg-gradient-to-r from-red-500 to-yellow-500  border-2 rounded-full text-sm py-2 px-5 hover:from-yellow-300 hover:to-red-300 cursor-pointer">Iniciar Sesion</span></a>
+      <a *ngIf="!log"><span  class="text-black font-medium bg-gradient-to-r from-red-500 to-yellow-500  border-2 rounded-full text-sm py-2 px-5 hover:from-yellow-300 hover:to-red-300 cursor-pointer"(click)="logIn()">Iniciar Sesion</span></a>
       <a *ngIf="log"><span  class="text-black font-medium bg-gradient-to-r from-red-500 to-yellow-500  border-2 rounded-full text-sm py-2 px-5 hover:from-yellow-300 hover:to-red-300 cursor-pointer" (click)="logOut()">Cerrar Sesion</span></a>
     </a>
 </div>

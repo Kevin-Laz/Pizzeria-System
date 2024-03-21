@@ -33,6 +33,10 @@ export class LoginService {
     sessionStorage.removeItem("token");
     this.currentUserLoginOn.next(false);
   }
+  //Acceso token
+  getToken():String{
+    return this.currentUserData.value;
+  }
   //Manejo de error http
   private handleError(error:HttpErrorResponse){
     if(error.status ===0){

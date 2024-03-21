@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { LoginService } from '../login.service';
 import { Ilogin } from '../auth/Ilogin';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +10,7 @@ import { Ilogin } from '../auth/Ilogin';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  constructor(private _login:LoginService){}
+  constructor(private _login:LoginService, private router:Router){}
   loginData: Ilogin = {
     email: '',
     password: ''
@@ -23,6 +24,7 @@ export class LoginComponent {
       this._login.login(this.loginData).subscribe({
         next:(userTemp)=>{
           console.log(userTemp);
+          this.router.navigate(['/inicio']);
         },error: (errorTemp)=>{
           console.error(errorTemp);
         }
