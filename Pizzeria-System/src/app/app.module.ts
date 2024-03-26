@@ -17,7 +17,6 @@ import { NosotrosComponent } from './nosotros/nosotros.component';
 
   const appRoutes:Routes=[
     {path:'',component:InicioComponent},
-    {path:'Inicio',component:InicioComponent},
     {path:'Login',component:LoginComponent},
     {path:'Horarios',component:HorariorComponent},
     {path:'Menu',component:MenuComponent},

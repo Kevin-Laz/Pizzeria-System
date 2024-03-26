@@ -6,3 +6,9 @@
 body {
   font-family: 'Montserrat', sans-serif;
 }
+@font-face {
+  font-family: 'IrisFont';
+  src: url('/assets/fonts/IrishGrover.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

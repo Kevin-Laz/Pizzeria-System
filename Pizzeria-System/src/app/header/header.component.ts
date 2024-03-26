@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../login.service';
 import { Router } from '@angular/router';
 
@@ -7,9 +7,14 @@ import { Router } from '@angular/router';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit{
   constructor(private _login:LoginService,private router:Router){}
-  log = false;
+  ngOnInit(): void {
+    this._login.currentUserLoginOn.subscribe((Islog)=>{
+      this.log = Islog;
+    })
+  }
+  log:boolean = false;
   logOut(){
     this._login.logout();
     this.log = false;

@@ -2,7 +2,7 @@
   <div class="">
     <img src="assets/img/logopizza.webp" alt="" class="bg-cover h-32 aspect-97/138 ">
   </div>
-  <nav class="flex grow justify-center">
+  <nav class="z-40 flex grow justify-center">
     <ul class="flex text-sm text-white gap-4 lg:gap-14">
       <li class=" "><a class="px-4 py-1 border-2 font-medium hover:bg-zinc-100 hover:text-black rounded" href="">Inicio</a></li>
       <li class=""><a class="px-4 py-1 border-2 font-medium hover:bg-zinc-100 hover:text-black rounded" href="/Menu">Menu</a></li>
@@ -11,7 +11,7 @@
       <li class=""><a class="px-4 py-1 border-2 font-medium hover:bg-zinc-100 hover:text-black rounded" href="/Nosotros">Nosotros</a></li>
     </ul>
   </nav>
-  <div class="">
+  <div class="z-40">
     <a class="flex gap-3 items-center justify-end cursor-pointer">
       <svg class="icon-person w-14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <defs>
@@ -29,8 +29,8 @@
         </path>
       </svg>
 
-      <a *ngIf="!log"><span  class="text-black font-medium bg-gradient-to-r from-red-500 to-yellow-500  border-2 rounded-full text-sm py-2 px-5 hover:from-yellow-300 hover:to-red-300 cursor-pointer"(click)="logIn()">Iniciar Sesion</span></a>
-      <a *ngIf="log"><span  class="text-black font-medium bg-gradient-to-r from-red-500 to-yellow-500  border-2 rounded-full text-sm py-2 px-5 hover:from-yellow-300 hover:to-red-300 cursor-pointer" (click)="logOut()">Cerrar Sesion</span></a>
+      <a *ngIf="!log"><span  class="z-40 text-black font-medium bg-gradient-to-r from-red-500 to-yellow-500  border-2 rounded-full text-sm py-2 px-5 hover:from-yellow-300 hover:to-red-300 cursor-pointer"(click)="logIn()">Iniciar Sesion</span></a>
+      <a *ngIf="log"><span  class="z-40 text-black font-medium bg-gradient-to-r from-red-500 to-yellow-500  border-2 rounded-full text-sm py-2 px-5 hover:from-yellow-300 hover:to-red-300 cursor-pointer" (click)="logOut()">Cerrar Sesion</span></a>
     </a>
 </div>
 </header>

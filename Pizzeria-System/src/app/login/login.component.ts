@@ -24,7 +24,7 @@ export class LoginComponent {
       this._login.login(this.loginData).subscribe({
         next:(userTemp)=>{
           console.log(userTemp);
-          this.router.navigate(['/inicio']);
+          this.router.navigate(['/']);
         },error: (errorTemp)=>{
           console.error(errorTemp);
         }
