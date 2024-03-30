@@ -1,8 +1,17 @@
-<header class="flex justify-between h-auto mt-2 items-center px-10 top-0 w-screen text-white">
-  <div class="">
-    <img src="assets/img/logopizza.webp" alt="" class="bg-cover h-32 aspect-97/138 ">
+<header class="flex justify-between h-auto mt-2 items-center px-2 md:px-10 top-0 w-screen text-white">
+  <div class="md:hidden flex h-20 w-20">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <path
+            d="M80 304h352v16H80zM80 248h352v16H80zM80 192h352v16H80z"
+            fill="#ffffff">
+        </path>
+    </svg>
   </div>
-  <nav class="z-40 flex grow justify-center">
+  <div class="">
+    <img src="assets/img/logopizza.webp" alt="" class="bg-cover h-auto max-h-32 min-w-36 aspect-97/138 ">
+  </div>
+
+  <nav class="navegar z-40 flex grow justify-center">
     <ul class="flex text-sm text-white gap-4 lg:gap-14">
       <li class=" "><a class="px-4 py-1 border-2 font-medium hover:bg-zinc-100 hover:text-black rounded" href="">Inicio</a></li>
       <li class=""><a class="px-4 py-1 border-2 font-medium hover:bg-zinc-100 hover:text-black rounded" href="/Menu">Menu</a></li>
@@ -13,11 +22,11 @@
   </nav>
   <div class="z-40">
     <a class="flex gap-3 items-center justify-end cursor-pointer">
-      <svg class="icon-person w-14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <svg (click)="logIn()" class=" icon-person w-14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style="stop-color:rgb(220, 209, 0);stop-opacity:1" />
-            <stop offset="100%" style="stop-color:rgb(250, 250, 250);stop-opacity:1" />
+            <stop offset="0%" style="stop-color:rgb(255, 128, 0);stop-opacity:1" />
+            <stop offset="100%" style="stop-color:rgb(255, 255, 255);stop-opacity:1" />
           </linearGradient>
         </defs>
         <path fill="url(#grad1)" d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zM6.858
@@ -29,8 +38,8 @@
         </path>
       </svg>
 
-      <a *ngIf="!log"><span  class="z-40 text-black font-medium bg-gradient-to-r from-red-500 to-yellow-500  border-2 rounded-full text-sm py-2 px-5 hover:from-yellow-300 hover:to-red-300 cursor-pointer"(click)="logIn()">Iniciar Sesion</span></a>
-      <a *ngIf="log"><span  class="z-40 text-black font-medium bg-gradient-to-r from-red-500 to-yellow-500  border-2 rounded-full text-sm py-2 px-5 hover:from-yellow-300 hover:to-red-300 cursor-pointer" (click)="logOut()">Cerrar Sesion</span></a>
+      <a *ngIf="!log"><span  class="z-40 navegar text-black font-medium bg-gradient-to-r from-red-500 to-yellow-500  border-2 rounded-full text-sm py-2 px-5 hover:from-yellow-300 hover:to-red-300 cursor-pointer"(click)="logIn()">Iniciar Sesion</span></a>
+      <a *ngIf="log"><span  class="z-40 navegar text-black font-medium bg-gradient-to-r from-red-500 to-yellow-500  border-2 rounded-full text-sm py-2 px-5 hover:from-yellow-300 hover:to-red-300 cursor-pointer" (click)="logOut()">Cerrar Sesion</span></a>
     </a>
 </div>
 </header>

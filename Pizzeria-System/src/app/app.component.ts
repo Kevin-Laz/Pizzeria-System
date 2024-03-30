@@ -8,10 +8,10 @@ import { AfterViewInit, Component, HostListener } from '@angular/core';
 export class AppComponent implements AfterViewInit{
   title = 'Pizzeria-System';
   ngAfterViewInit() {
-    
+
   }
-  @HostListener('window:scroll', ['$event'])
+  /*@HostListener('window:scroll', ['$event'])
   onScroll() {
     console.log('ScrollX:', window.scrollX, 'ScrollY:', window.scrollY);
-  }
+  }*/
 }

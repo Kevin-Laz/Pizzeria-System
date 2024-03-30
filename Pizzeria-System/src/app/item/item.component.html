@@ -1,0 +1,49 @@
+
+  <div class="w-full flex flex-col justify-center pt-4 pb-1 px-8  rounded-lg lg:px-8 lg:pb-2">
+    <div class=" ">
+      <p class="text-[2em] uppercase text-white font-bold ">Pizza {{name}}</p>
+      <p class=" uppercase text-[1em] text-gray-400 ">
+        Una delicia clásica
+      </p>
+    </div>
+    <div class="prod-img">
+      <img class="w-full object-cover object-center " src="assets/img/{{imagen}}" />
+    </div>
+    <div class="prod-info ">
+      <div class="">
+        <ul class="flex  flex-row justify-center items-center">
+          <li class="mr-4 text-sm lg:text-base last:mr-0">
+            <button (click)="mediana()" (mouseover)="mediana()" class="block w-auto text-white hover:text-gray-500 rounded-full">
+              <span
+                  class="block p-2 border-2 border-white hover:border-gray-500  rounded-full transition ease-in duration-300">
+              Mediana
+            </span>
+            </button>
+          </li>
+          <li class="mr-4 text-sm lg:text-base last:mr-0">
+            <button (click)="grande()" (mouseover)="grande()" class="block w-auto text-white hover:text-gray-500 rounded-full">
+              <span
+                  class="block p-2 border-2 border-white hover:border-gray-500  rounded-full transition ease-in duration-300">
+              Grande
+            </span>
+            </button>
+          </li>
+          <li class="mr-4 text-sm lg:text-base last:mr-0">
+            <button (click)="familiar()" (mouseover)="familiar()" class="block w-auto text-white hover:text-gray-500 rounded-full">
+              <span
+                  class="block p-2 border-2 border-white hover:border-gray-500  rounded-full transition ease-in duration-300">
+              Familiar
+            </span>
+            </button>
+          </li>
+
+        </ul>
+      </div>
+      <div class="flex flex-col md:flex-row justify-evenly items-center mt-8 text-white">
+        <p class="font-bold text-xl mb-2 min-w-14">S/ {{priceTemp}}</p>
+        <button class="px-6 py-2  border-orange-500 transition ease-in duration-200 uppercase rounded-full hover:bg-gray-700 hover:border-white hover:text-white border-2 focus:outline-none">Agregar
+          </button>
+      </div>
+    </div>
+  </div>
+

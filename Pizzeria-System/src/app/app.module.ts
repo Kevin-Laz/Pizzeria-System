@@ -14,6 +14,7 @@ import { MenuComponent } from './menu/menu.component';
 import { ServicioComponent } from './servicio/servicio.component';
 import { HorariorComponent } from './horarior/horarior.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
+import { ItemComponent } from './item/item.component';
 
   const appRoutes:Routes=[
     {path:'',component:InicioComponent},
@@ -32,7 +33,8 @@ import { NosotrosComponent } from './nosotros/nosotros.component';
     MenuComponent,
     ServicioComponent,
     HorariorComponent,
-    NosotrosComponent
+    NosotrosComponent,
+    ItemComponent
   ],
   imports: [
     BrowserModule,FormsModule,AppRoutingModule,RouterModule.forRoot(appRoutes),HttpClientModule

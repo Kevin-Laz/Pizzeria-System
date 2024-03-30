@@ -20,6 +20,8 @@ export class HeaderComponent implements OnInit{
     this.log = false;
   }
   logIn(){
-    this.router.navigate(['Login']);
+    if(!this.log){
+      this.router.navigate(['Login']);
+    }
   }
 }
